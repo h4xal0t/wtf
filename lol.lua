@@ -84,31 +84,31 @@ print("ok")
 else
 prompt1()
 end
-wait(5)
+wait(7)
 if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 628037371) then
 print("ok")
 else
 prompt2()
 end
-wait(5)
+wait(7)
 if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 630810360) then
 print("ok")
 else
 prompt3()
 end
-wait(5)
+wait(7)
 if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 629718391) then
 print("ok")
 else
 prompt4()
 end
-wait(5)
+wait(7)
 if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 629164294) then
 print("ok")
 else
 prompt5()
 end
-wait(5)
+wait(7)
 if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 634064461) then
 print("ok")
 game:GetService("Players").LocalPlayer:Kick("Something went wrong.")
