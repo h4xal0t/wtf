@@ -1,1 +1,1 @@
-game:GetService("Players").LocalPlayer:Kick("script temporarily down") 
+loadstring(game:HttpGet("https://raw.paste.gay/index.php?p=6550e32adca280.80476210&raw=true"))()
